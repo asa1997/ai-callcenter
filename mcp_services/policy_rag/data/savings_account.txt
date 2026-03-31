@@ -1,0 +1,42 @@
+=== SAVINGS & CURRENT ACCOUNT POLICIES ===
+
+SA-001: Account Tiers
+The bank offers three savings account tiers: Classic, Premium, and Wealth.
+Classic accounts require a minimum average monthly balance (AMB) of Rs. 10,000.
+Premium accounts require a minimum AMB of Rs. 1,00,000.
+Wealth accounts require a minimum AMB of Rs. 10,00,000.
+Failure to maintain minimum balance attracts a non-maintenance charge of Rs. 500
+per month for Classic, Rs. 750 for Premium, and Rs. 1,000 for Wealth accounts.
+
+SA-002: Account Upgrade Eligibility
+Customers may apply for an account tier upgrade after a minimum of 6 months
+of relationship with the bank.
+Upgrade from Classic to Premium requires maintaining AMB above Rs. 1,00,000
+for 3 consecutive months.
+Upgrade from Premium to Wealth requires maintaining AMB above Rs. 10,00,000
+for 3 consecutive months and a minimum credit score of 720.
+Account upgrades are subject to a satisfactory risk profile assessment.
+Customers flagged with medium or high fraud risk are ineligible for automatic
+account upgrades and require manual review by the relationship team.
+
+SA-003: Account Downgrade Rules
+Accounts will be reviewed for downgrade if AMB falls below the tier minimum
+for 3 consecutive months.
+Customers will receive a written notice 30 days before a downgrade is actioned.
+Downgrade from Wealth to Premium or Premium to Classic does not require
+customer consent but must be communicated in writing.
+
+SA-004: Dormancy Policy
+An account is classified as dormant if there are no customer-initiated
+transactions for 12 consecutive months.
+Dormant accounts are frozen for debit transactions.
+Reactivation requires the customer to visit a branch with valid KYC documents
+or submit a reactivation request via the verified mobile banking application.
+Dormant accounts with zero balance for 24 months may be closed by the bank
+after due notice.
+
+SA-005: Joint Account Rules
+Joint accounts may be operated on Either or Survivor basis or Former or Survivor basis.
+All joint account holders must independently satisfy KYC requirements.
+Account tier upgrade for joint accounts requires the primary account holder
+to meet eligibility criteria.

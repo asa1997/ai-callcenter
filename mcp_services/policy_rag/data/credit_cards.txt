@@ -1,0 +1,50 @@
+=== CREDIT CARD POLICIES ===
+
+CC-001: Credit Card Eligibility
+Salaried applicants must have a minimum net monthly income of Rs. 25,000.
+Self-employed applicants must demonstrate a minimum annual ITR of Rs. 4,00,000.
+Minimum credit score for standard credit card issuance is 700.
+Applicants with a credit score between 650 and 699 are eligible for a
+secured credit card only, requiring a fixed deposit of minimum Rs. 25,000.
+Applicants with a credit score below 650 are ineligible for any credit
+card product including secured cards.
+Minimum age at application is 21 years. Maximum age is 60 years.
+Applicants must have a minimum of 1 year of continuous employment or
+2 years of self-employment history.
+
+CC-002: Credit Limit Assignment
+Initial credit limit for Classic segment customers: Up to 3 times net monthly salary.
+Initial credit limit for Premium segment customers: Up to 5 times net monthly salary.
+Initial credit limit for Wealth segment customers: Up to 8 times net monthly salary,
+subject to a maximum of Rs. 25,00,000.
+Credit limits are subject to bureau assessment and internal risk scoring.
+
+CC-003: Credit Limit Enhancement
+Customers may request a credit limit enhancement after 12 months of
+continuous card usage with the bank.
+Eligibility requires zero missed payments in the last 12 months.
+Minimum credit score of 720 is required at the time of enhancement request.
+Premium and Wealth segment customers with a credit score above 750 and
+a clean payment history of 12 months are eligible for automatic enhancement
+of up to 50% of existing limit.
+Classic segment customers require manual review for all enhancement requests
+regardless of credit score.
+Customers with high repayment risk are not eligible for credit limit enhancement
+under any customer segment and require mandatory manual review.
+
+CC-004: Annual Fee Waiver
+Standard annual fee waiver is applicable if total annual card spends exceed
+Rs. 1,50,000 in the preceding 12 months.
+Wealth segment customers receive an automatic annual fee waiver irrespective
+of spend levels.
+First year fee waiver is available for applicants joining through the
+corporate salary account program or employee banking channel.
+Fee waiver requests outside standard criteria require approval from the
+relationship manager and are subject to GR-002 exception handling rules.
+
+CC-005: Card Suspension and Cancellation
+Cards will be suspended immediately if fraud risk is reclassified to high.
+Suspended cards require manual review before reinstatement.
+Customers disputing a suspension may escalate to the nodal officer within
+30 days of the suspension notice.
+Card cancellation requires written confirmation from the primary cardholder.

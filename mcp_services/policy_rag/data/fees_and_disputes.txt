@@ -1,0 +1,53 @@
+=== FEE AND DISPUTE RESOLUTION POLICIES ===
+
+FD-001: Standard Fee Waiver Eligibility
+Fee waivers are available for the following charges under defined conditions:
+- Non-maintenance charges: Waived once per financial year for Classic
+  segment customers with a satisfactory relationship history of 2 years.
+- NEFT/RTGS charges: Waived for Premium and Wealth segment customers
+  on all transactions.
+- Demand Draft issuance charges: Waived for Wealth segment customers.
+- SMS alert charges: Waived for all customers maintaining AMB above
+  the minimum tier requirement for 6 consecutive months.
+Fee waivers beyond the above require relationship manager approval and
+must comply with GR-002 exception handling rules.
+
+FD-002: Dispute Filing Process
+Customers may raise a transaction dispute within 60 days of the
+transaction date.
+Disputes must be submitted through the mobile banking application,
+net banking portal, or by visiting a branch in person.
+Telephonic disputes are accepted for amounts above Rs. 10,000 only
+and must be followed by written confirmation within 7 days.
+Each dispute is assigned a unique reference number which the customer
+must retain for follow-up purposes.
+
+FD-003: Dispute Resolution Timelines
+Credit card transaction disputes: Resolved within 45 days of filing.
+UPI and IMPS disputes: Resolved within 7 business days.
+NEFT and RTGS disputes: Resolved within 5 business days.
+ATM cash disputes: Resolved within 7 business days.
+If resolution is delayed beyond the stated timeline, the customer
+is entitled to a compensation of Rs. 100 per day of delay, subject
+to a maximum of Rs. 10,000.
+
+FD-004: Goodwill Adjustments
+Goodwill adjustments are available for customers who have experienced
+a service failure attributable to the bank.
+Maximum goodwill adjustment for Classic segment: Rs. 500 per instance.
+Maximum goodwill adjustment for Premium segment: Rs. 2,000 per instance.
+Maximum goodwill adjustment for Wealth segment: Rs. 5,000 per instance.
+Goodwill adjustments are limited to 2 instances per customer per
+financial year.
+Goodwill adjustments require approval from the branch manager or
+senior relationship manager and must be logged in the CRM system.
+Goodwill adjustments cannot be used to waive mandatory regulatory
+charges or penalties.
+
+FD-005: Escalation Matrix
+Level 1: Customer service agent — resolution within 3 business days.
+Level 2: Branch manager or senior agent — resolution within 7 business days.
+Level 3: Nodal officer — resolution within 15 business days.
+Level 4: Banking Ombudsman — available after exhausting internal escalation.
+Customers must receive written acknowledgement within 24 hours of
+any escalation reaching Level 2 or above.

@@ -1,0 +1,57 @@
+=== PERSONAL LOAN POLICIES ===
+
+PL-001: Personal Loan Eligibility
+Minimum net monthly income for salaried applicants: Rs. 30,000.
+Minimum tenure with current employer: 1 year.
+Minimum credit score for personal loan approval: 680.
+Applicants with a credit score between 650 and 679 may be considered
+at a higher interest rate with additional income documentation, subject
+to manual underwriting approval.
+Applicants with a credit score below 650 are ineligible for personal loans.
+Maximum age at loan maturity: 60 years for salaried applicants.
+Maximum age at loan maturity: 65 years for self-employed applicants.
+Applicants with high repayment risk are ineligible for personal loan
+disbursement without a mandatory credit committee review.
+
+PL-002: Loan Amount and Tenure
+Maximum loan amount for salaried applicants: 20 times net monthly salary,
+subject to an absolute cap of Rs. 40,00,000.
+Maximum loan amount for self-employed applicants: 10 times average monthly
+income, subject to an absolute cap of Rs. 25,00,000.
+Minimum loan tenure: 12 months.
+Maximum loan tenure: 60 months.
+EMI to net monthly income ratio must not exceed 50% including all existing
+loan obligations.
+Customers with existing loans where the EMI-to-income ratio already exceeds
+40% will be subject to enhanced scrutiny.
+
+PL-003: Interest Rate Structure
+Interest rates for personal loans are determined by credit score band,
+customer segment, and repayment risk classification.
+Customers with repayment risk classified as high will be offered rates
+at the top of the applicable band or declined, at the discretion of
+the underwriting team.
+Rate concessions of up to 0.5% are available for Premium segment customers
+with a credit score above 750 and low repayment risk.
+Rate concessions for Wealth segment customers with low repayment risk
+may extend to 1% below the standard rate, subject to credit committee approval.
+
+PL-004: Prepayment and Foreclosure
+Prepayment is permitted after a minimum of 6 EMI payments have been made.
+Foreclosure charges: 4% of outstanding principal if closed within the
+first 12 months of disbursement.
+Foreclosure charges: 2% of outstanding principal if closed between
+13 and 24 months from disbursement.
+No foreclosure charges apply after 24 months of successful repayment.
+Premium and Wealth segment customers with a low repayment risk classification
+are exempt from foreclosure charges at any point during the loan tenure.
+Customers with high repayment risk are not eligible for this exemption
+regardless of customer segment.
+
+PL-005: Top-Up Loan Eligibility
+Existing personal loan customers may apply for a top-up loan after
+12 months of regular repayment with zero missed EMIs.
+Top-up eligibility is subject to re-assessment of current credit score
+and repayment risk at the time of application.
+Customers whose repayment risk has increased to high since original
+disbursement are ineligible for top-up loans.

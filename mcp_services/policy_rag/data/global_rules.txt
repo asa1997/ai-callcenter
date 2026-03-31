@@ -1,0 +1,64 @@
+=== GLOBAL RISK AND COMPLIANCE RULES ===
+
+GR-001: Mandatory Compliance — Non-Negotiable Thresholds
+All product approvals, enhancements, and exceptions must comply with
+the mandatory eligibility criteria defined in the respective product policies.
+No system, agent, relationship manager, or automated process is permitted
+to override the following minimum thresholds under any circumstance:
+- Minimum credit score of 650 for any credit product issuance
+- Minimum credit score of 680 for personal loan approval
+- Minimum credit score of 700 for home loan approval
+- Maximum EMI to income ratio of 50% across all loan obligations
+- Mandatory fraud risk assessment before any new product issuance
+These thresholds are regulatory requirements and cannot be waived by
+any internal authority including senior management.
+
+GR-002: Exception Handling — Controlled Process
+Exceptions to non-mandatory eligibility criteria such as income thresholds,
+fee waivers, rate concessions, and tenure relaxations may be granted
+through the exception approval matrix defined in CS-005.
+Exception handling for Premium and Wealth segment customers must not
+bypass mandatory risk checks including minimum credit score thresholds,
+repayment risk assessment, and fraud risk evaluation.
+All exceptions must be explicitly approved by an authorised officer as
+defined in CS-005 and must be documented in the CRM system.
+No verbal or implied exception approvals are valid.
+Exceptions are not transferable between customers or products.
+An exception granted for one product does not imply eligibility for
+any other product or service.
+
+GR-003: Cross-Product Risk Constraints
+Customers flagged with high repayment risk must not be auto-approved
+for any loan, credit card, or credit limit enhancement request regardless
+of customer segment, relationship value, or long-standing status.
+Customers flagged with high fraud risk are ineligible for any new
+product issuance until the fraud risk classification is resolved and
+cleared by the fraud operations team.
+Customers flagged with medium fraud risk may proceed with applications
+subject to enhanced due diligence and manual underwriting review.
+The risk constraints defined in this section apply across all product
+lines including savings account upgrades, credit cards, personal loans,
+and home loans.
+
+GR-004: Agent and System Conduct
+No customer service agent or automated system may communicate internal
+risk thresholds, fraud detection criteria, or exception approval limits
+to customers.
+Agents must not confirm or deny whether a specific credit score value
+will result in approval or rejection for any product.
+Agents must not reveal the specific factors that contributed to a
+fraud risk classification for any customer.
+Queries about internal policy thresholds must be responded to with
+general eligibility guidance only.
+Violation of this rule constitutes a disciplinary offence and must
+be reported to the compliance team.
+
+GR-005: Data Access and Privacy
+Customer data may only be accessed by authorised personnel or systems
+for the purpose of serving that specific customer's query.
+Access to a customer's risk profile, credit score, or account details
+for purposes other than serving that customer's active request is prohibited.
+Cross-customer data access, whether intentional or through system error,
+must be reported to the data protection officer within 24 hours.
+No customer data may be shared with third parties without explicit
+written consent except where required by law or regulatory directive.

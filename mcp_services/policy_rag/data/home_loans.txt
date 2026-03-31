@@ -1,0 +1,50 @@
+=== HOME LOAN POLICIES ===
+
+HL-001: Home Loan Eligibility
+Minimum net monthly income for salaried applicants: Rs. 50,000.
+Minimum net monthly income for self-employed applicants: Rs. 75,000
+based on average of last 2 years ITR.
+Minimum credit score for home loan approval: 700.
+Applicants with a credit score between 680 and 699 may be considered
+with a higher down payment of 30% and mandatory co-applicant.
+Applicants with a credit score below 680 are ineligible for home loans.
+Minimum age at application: 23 years.
+Maximum age at loan maturity: 65 years for salaried, 70 years for
+self-employed applicants.
+Applicants with high repayment risk or high fraud risk are ineligible
+for home loan approval and must be declined at the application stage.
+
+HL-002: Loan to Value Ratios
+For properties valued up to Rs. 30,00,000: Maximum LTV of 90%.
+For properties valued between Rs. 30,00,001 and Rs. 75,00,000: Maximum LTV of 80%.
+For properties valued above Rs. 75,00,000: Maximum LTV of 75%.
+LTV ratios are calculated on the lower of the market value or
+the registered sale value of the property.
+Premium and Wealth segment customers with a credit score above 750
+and low repayment risk may be considered for LTV relaxation of up to 5%,
+subject to credit committee approval and GR-002 exception handling rules.
+
+HL-003: Co-Applicant Rules
+A co-applicant is mandatory for all home loans above Rs. 75,00,000.
+Co-applicants must independently satisfy minimum income and KYC requirements.
+Co-applicants with a credit score below 650 will negatively impact
+the composite credit assessment.
+Spouse co-applicants are preferred. Non-family co-applicants require
+additional documentation including a declaration of relationship.
+
+HL-004: Home Loan Top-Up
+Existing home loan customers are eligible for a top-up loan after
+24 months of regular repayment with zero missed EMIs.
+Maximum top-up amount: 75% of the original loan amount or Rs. 50,00,000,
+whichever is lower.
+Top-up loan purpose must be declared and is restricted to home improvement,
+education, or medical emergencies.
+Customers with a repayment risk reclassified to medium or high since
+original disbursement are not eligible for home loan top-up.
+
+HL-005: Repayment and Prepayment
+Home loans on floating interest rates carry no prepayment penalty.
+Home loans on fixed interest rates carry a prepayment charge of 2%
+of the outstanding principal.
+Part prepayment reduces the outstanding principal and may be used
+to reduce either the EMI amount or the remaining tenure.

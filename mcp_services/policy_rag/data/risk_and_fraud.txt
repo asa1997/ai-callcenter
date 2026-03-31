@@ -1,0 +1,54 @@
+=== RISK AND FRAUD POLICIES ===
+
+RF-001: Fraud Risk Classification
+Customer fraud risk is classified as Low, Medium, or High based on
+a combination of behavioural, transactional, and bureau signals.
+The following factors increase fraud risk classification:
+- Multiple failed login attempts across channels within 24 hours
+- Change of registered mobile number or email address followed by
+  high-value transaction within 48 hours
+- Transaction originating from a new device or geography not seen
+  in the last 6 months, above Rs. 50,000 in value
+- More than 3 beneficiary additions in a 7-day period
+- Mismatch between declared income and observed account behaviour
+
+RF-002: Actions on Fraud Risk Escalation
+Accounts reclassified to medium fraud risk are flagged for enhanced
+transaction monitoring for a period of 90 days.
+Accounts reclassified to high fraud risk are immediately restricted
+for outward transactions above Rs. 10,000 pending review.
+High fraud risk accounts are ineligible for any new product issuance
+including credit cards, loans, or account upgrades until the risk
+classification is resolved.
+Fraud risk reclassification to high triggers a mandatory review by
+the fraud operations team within 2 business days.
+
+RF-003: Repayment Risk Classification
+Repayment risk is classified as Low, Medium, or High based on
+credit bureau data, payment history, and existing debt obligations.
+High repayment risk is assigned when:
+- Credit score falls below 650
+- EMI to income ratio across all obligations exceeds 60%
+- More than 2 missed payments in the last 12 months are recorded
+- A loan or credit card account has been written off in the last 3 years
+Medium repayment risk is assigned when:
+- Credit score is between 650 and 680
+- EMI to income ratio is between 50% and 60%
+- 1 to 2 missed payments are recorded in the last 12 months
+
+RF-004: Account Freeze Conditions
+An account may be frozen by the bank under the following conditions:
+- Receipt of a court order or regulatory directive
+- Confirmed fraudulent activity detected by the fraud operations team
+- Customer reported as deceased and account pending legal settlement
+- KYC non-compliance beyond the regulatory deadline
+A frozen account cannot be unfrozen by the customer service agent.
+Unfreezing requires written approval from the compliance or legal team.
+
+RF-005: Transaction Monitoring Thresholds
+Cash deposits above Rs. 10,00,000 in a single transaction or
+Rs. 50,00,000 in a calendar month trigger mandatory reporting.
+International transfers above Rs. 5,00,000 require additional
+source of funds documentation.
+Transactions inconsistent with the customer's declared occupation
+and income profile are escalated for review automatically.

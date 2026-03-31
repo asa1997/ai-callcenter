@@ -1,0 +1,46 @@
+{
+  "11111": {
+    "customer_id":        "11111",
+    "name":               "Rahul Sharma",
+    "segment":            "Premium",
+    "account_status":     "Active",
+    "relationship_value": "High",
+    "tenure_years":       8,
+    "account_type":       "Savings",
+    "email":              "rahul.sharma@email.com",
+    "phone":              "+91-98765-43210"
+  },
+  "12345": {
+    "customer_id":        "12345",
+    "name":               "Priya Mehta",
+    "segment":            "Classic",
+    "account_status":     "Active",
+    "relationship_value": "Medium",
+    "tenure_years":       3,
+    "account_type":       "Savings",
+    "email":              "priya.mehta@email.com",
+    "phone":              "+91-98765-11111"
+  },
+  "99999": {
+    "customer_id":        "99999",
+    "name":               "Amit Patel",
+    "segment":            "Wealth",
+    "account_status":     "Active",
+    "relationship_value": "Very High",
+    "tenure_years":       15,
+    "account_type":       "Savings",
+    "email":              "amit.patel@email.com",
+    "phone":              "+91-98765-99999"
+  },
+  "00001": {
+    "customer_id":        "00001",
+    "name":               "Sunita Krishnan",
+    "segment":            "Wealth",
+    "account_status":     "Active",
+    "relationship_value": "Very High",
+    "tenure_years":       20,
+    "account_type":       "Savings",
+    "email":              "sunita.k@email.com",
+    "phone":              "+91-98765-00001"
+  }
+}

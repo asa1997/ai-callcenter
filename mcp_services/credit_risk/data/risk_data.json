@@ -1,0 +1,42 @@
+{
+  "11111": {
+    "customer_id":     "11111",
+    "credit_score":    750,
+    "fraud_risk":      "Low",
+    "repayment_risk":  "Low",
+    "flag_reason":     null,
+    "missed_payments": 0,
+    "emi_ratio":       0.25,
+    "last_reviewed":   "2024-01-15"
+  },
+  "12345": {
+    "customer_id":     "12345",
+    "credit_score":    620,
+    "fraud_risk":      "Medium",
+    "repayment_risk":  "High",
+    "flag_reason":     "EMI ratio exceeds 50% threshold",
+    "missed_payments": 2,
+    "emi_ratio":       0.58,
+    "last_reviewed":   "2024-02-20"
+  },
+  "99999": {
+    "customer_id":     "99999",
+    "credit_score":    810,
+    "fraud_risk":      "Low",
+    "repayment_risk":  "Low",
+    "flag_reason":     null,
+    "missed_payments": 0,
+    "emi_ratio":       0.18,
+    "last_reviewed":   "2024-03-01"
+  },
+  "00001": {
+    "customer_id":     "00001",
+    "credit_score":    780,
+    "fraud_risk":      "Low",
+    "repayment_risk":  "Low",
+    "flag_reason":     null,
+    "missed_payments": 0,
+    "emi_ratio":       0.22,
+    "last_reviewed":   "2024-03-10"
+  }
+}

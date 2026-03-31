@@ -1,0 +1,59 @@
+=== CUSTOMER SEGMENT AND EXCEPTION POLICIES ===
+
+CS-001: Segment Definitions
+Classic Segment: Customers with AMB between Rs. 10,000 and Rs. 99,999
+or total relationship value below Rs. 5,00,000.
+Premium Segment: Customers with AMB between Rs. 1,00,000 and Rs. 9,99,999
+or total relationship value between Rs. 5,00,000 and Rs. 49,99,999.
+Wealth Segment: Customers with AMB of Rs. 10,00,000 and above
+or total relationship value of Rs. 50,00,000 and above.
+Total relationship value includes savings balances, fixed deposits,
+mutual fund holdings, and insurance premiums held with the bank.
+Customer segment is reviewed quarterly and may be upgraded or downgraded
+based on the latest relationship value assessment.
+
+CS-002: Premium Segment Benefits
+Dedicated relationship manager assigned to each Premium customer.
+Priority customer service queue across all channels.
+Rate concessions on personal loans of up to 0.5% for customers with
+credit score above 750 and low repayment risk.
+Automatic annual fee waiver on primary credit card if spends exceed
+Rs. 1,00,000 (reduced threshold from standard Rs. 1,50,000).
+Free demand drafts up to 5 per month.
+Premium customers with 12 months of clean payment history are eligible
+for automatic credit limit enhancement of up to 50% subject to
+credit score above 750 at time of enhancement.
+
+CS-003: Wealth Segment Benefits
+Private banking relationship manager and team assigned.
+Automatic annual fee waiver on all credit cards irrespective of spend.
+Rate concessions on home loans and personal loans up to 1% below
+standard rate for customers with low repayment risk.
+Free RTGS, NEFT, and demand drafts with no volume limit.
+Dedicated wealth desk for investment and insurance advisory.
+Wealth customers with low repayment risk are exempt from foreclosure
+charges on personal loans at any point during the loan tenure.
+
+CS-004: Long-Standing Customer Benefits
+Customers with a banking relationship of 10 years or more are
+classified as long-standing customers irrespective of segment.
+Long-standing customers with a satisfactory account conduct history
+are eligible for one fee waiver per financial year beyond the standard
+segment entitlement, subject to relationship manager approval.
+Long-standing customers with medium repayment risk may be considered
+for personal loan approval on a case-by-case basis with enhanced
+documentation, subject to credit committee review and GR-002 compliance.
+Long-standing customer status does not override mandatory risk checks
+or minimum credit score requirements under any circumstances.
+
+CS-005: Exception Approval Matrix
+All exceptions to standard eligibility criteria must follow this matrix:
+- Exceptions for Classic segment customers: Branch manager approval required.
+- Exceptions for Premium segment customers: Senior relationship manager approval.
+- Exceptions for Wealth segment customers: Regional credit head approval.
+No exception, regardless of customer segment or relationship value,
+may override the minimum credit score thresholds defined in GR-001.
+No exception may be granted to a customer with high fraud risk without
+written approval from the fraud operations head.
+All exceptions must be documented in the CRM system with a clear
+rationale and the approving authority's employee ID.

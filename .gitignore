@@ -1,0 +1,29 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Chroma database
+rag/chroma_store/
+
+# ONNX model — too large for GitHub (253MB)
+mcp_services/document_processor/model/distilbert.onnx
+
+# Environment files
+.env
+*.env
+
+# Mac files
+.DS_Store
+
+# Backup files
+*.backup
+*.toml.backup
+
+# Logs
+*.log
