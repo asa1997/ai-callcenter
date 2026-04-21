@@ -6,7 +6,7 @@ import chromadb
 from sentence_transformers import SentenceTransformer
 
 # ── Configuration ─────────────────────────────────────────────────────────────
-from mcp_services.policy_rag.config import (
+from mcp_services.policy_rag.rag_config import (
     CHROMA_DIR,
     COLLECTION_NAME,
     EMBEDDING_MODEL,
