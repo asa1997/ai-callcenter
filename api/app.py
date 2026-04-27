@@ -1,6 +1,7 @@
 import os
+import io
 import json
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import uvicorn
@@ -39,11 +40,6 @@ class ChatResponse(BaseModel):
     escalated:    bool
 
 
-class UploadRequest(BaseModel):
-    customer_id:   str
-    document_text: str
-
-
 class UploadResponse(BaseModel):
     customer_id:      str
     document_type:    str
@@ -51,6 +47,7 @@ class UploadResponse(BaseModel):
     income:           int | None
     income_formatted: str
     document_context: str    # pass this to /chat as document_context
+    filename:         str
     message:          str
 
 
@@ -102,12 +99,42 @@ def chat(request: ChatRequest):
     )
 
 
+ALLOWED_EXTENSIONS = {".txt", ".pdf", ".csv", ".json"}
+MAX_FILE_SIZE = 10 * 1024 * 1024  # 10 MB
+
+
+def _extract_text_from_file(file_bytes: bytes, filename: str) -> str:
+    """Extract text content from an uploaded file."""
+    ext = os.path.splitext(filename)[1].lower()
+
+    if ext == ".pdf":
+        try:
+            import PyPDF2
+            reader = PyPDF2.PdfReader(io.BytesIO(file_bytes))
+            pages = [page.extract_text() or "" for page in reader.pages]
+            return "\n".join(pages).strip()
+        except Exception as e:
+            raise HTTPException(
+                status_code=422,
+                detail=f"Failed to parse PDF: {e}"
+            )
+
+    # text-based files
+    try:
+        return file_bytes.decode("utf-8")
+    except UnicodeDecodeError:
+        return file_bytes.decode("latin-1")
+
+
 @app.post("/upload", response_model=UploadResponse)
-def upload(request: UploadRequest):
+async def upload(
+    customer_id: str = Form(...),
+    file: UploadFile = File(...),
+):
     """
     Document upload endpoint.
 
-    Customer submits document text.
+    Customer uploads a file (PDF, TXT, CSV, JSON).
     Calls Document Processing MCP server (port 8004).
     DistilBERT ONNX model extracts structured fields.
     Returns document_context — pass this to /chat.
@@ -118,16 +145,30 @@ def upload(request: UploadRequest):
     - Threat 3: injection in document flows to agent
     - AIRS guardrail intercepts at MCP output in secured system
     """
-    if not request.customer_id:
+    if not customer_id:
         raise HTTPException(status_code=400, detail="customer_id is required")
-    if not request.document_text:
-        raise HTTPException(status_code=400, detail="document_text is required")
+    if not file.filename:
+        raise HTTPException(status_code=400, detail="file is required")
+
+    ext = os.path.splitext(file.filename)[1].lower()
+    if ext not in ALLOWED_EXTENSIONS:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Unsupported file type '{ext}'. Allowed: {', '.join(ALLOWED_EXTENSIONS)}"
+        )
+
+    file_bytes = await file.read()
+    if len(file_bytes) > MAX_FILE_SIZE:
+        raise HTTPException(status_code=400, detail="File too large. Max 10 MB.")
+    if len(file_bytes) == 0:
+        raise HTTPException(status_code=400, detail="Uploaded file is empty")
+
+    document_text = _extract_text_from_file(file_bytes, file.filename)
+    if not document_text.strip():
+        raise HTTPException(status_code=422, detail="Could not extract text from file")
 
     # Call document MCP server via mcp_client
-    raw_result = extract_document_info(
-        request.document_text,
-        request.customer_id
-    )
+    raw_result = extract_document_info(document_text, customer_id)
 
     # Parse JSON result from document server
     result = json.loads(raw_result)
@@ -143,12 +184,13 @@ def upload(request: UploadRequest):
     })
 
     return UploadResponse(
-        customer_id=     request.customer_id,
+        customer_id=     customer_id,
         document_type=   result.get("document_type", "unknown"),
         employment_type= result.get("employment_type", "unknown"),
         income=          result.get("income"),
         income_formatted=result.get("income_formatted", "Not found"),
         document_context=document_context,
+        filename=        file.filename,
         message=         "Document processed. Pass document_context to /chat."
     )
 
