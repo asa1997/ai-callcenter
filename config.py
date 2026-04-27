@@ -25,7 +25,7 @@ OLLAMA_MODEL = "llama3.1"
 # ── RAG / Chroma ──────────────────────────────────────────────────────────────
 CHROMA_DIR      = "rag/chroma_store"
 COLLECTION_NAME = "bank_policies"
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+EMBEDDING_MODEL = "all-minilm:l6-v2"
 N_RESULTS       = 5
 
 # ── Document Processing ───────────────────────────────────────────────────────

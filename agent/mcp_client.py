@@ -88,6 +88,21 @@ def extract_document_info(document_text: str, customer_id: str) -> str:
         }
     )
 
+
+async def extract_document_info_async(document_text: str, customer_id: str) -> str:
+    """
+    Async version — use from async endpoints (e.g. /upload).
+    Requires document_server.py running on port 8004.
+    """
+    client = MCPClient()
+    return await client.call_tool(
+        "extract_document_info",
+        {
+            "document_text": document_text,
+            "customer_id":   customer_id
+        }
+    )
+
 def get_customer_profile(customer_id: str) -> str:
     """Get customer profile from Customer Profile MCP server."""
     client = MCPClient()

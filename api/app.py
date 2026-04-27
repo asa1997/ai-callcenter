@@ -7,7 +7,7 @@ from pydantic import BaseModel
 import uvicorn
 
 from agent.agent import handle_message
-from agent.mcp_client import extract_document_info
+from agent.mcp_client import extract_document_info_async
 
 app = FastAPI(
     title="AI Call Center Agent",
@@ -168,7 +168,7 @@ async def upload(
         raise HTTPException(status_code=422, detail="Could not extract text from file")
 
     # Call document MCP server via mcp_client
-    raw_result = extract_document_info(document_text, customer_id)
+    raw_result = await extract_document_info_async(document_text, customer_id)
 
     # Parse JSON result from document server
     result = json.loads(raw_result)
