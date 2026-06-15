@@ -31,3 +31,26 @@ server {
         proxy_set_header Connection "upgrade";
     }
 }
+
+
+
+curl -k -I https://localhost/health ->
+HTTP/2 404 
+content-type: text/plain; charset=utf-8
+x-content-type-options: nosniff
+content-length: 19
+date: Mon, 15 Jun 2026 09:55:33 GMT
+
+grep -r "default_server" /etc/nginx ->
+/etc/nginx/sites-available/default:     listen 80 default_server;
+/etc/nginx/sites-available/default:     listen [::]:80 default_server;
+/etc/nginx/sites-available/default:     # listen 443 ssl default_server;
+/etc/nginx/sites-available/default:     # listen [::]:443 ssl default_server;
+/etc/nginx/sites-available/demoagent.o31e.com:    listen 443 ssl default_server;
+
+tail -f /var/log/nginx/access.log
+<ip> - - [15/Jun/2026:03:36:48 +0000] "GET / HTTP/1.1" 444 0 "-" "ELB-HealthChecker/2.0"
+<ip> - - [15/Jun/2026:04:50:49 +0000] "GET / HTTP/1.1" 444 0 "-" "ELB-HealthChecker/2.0"
+<ip> - - [15/Jun/2026:04:50:55 +0000] "GET / HTTP/1.1" 444 0 "-" "ELB-HealthChecker/2.0"
+<ip> - - [15/Jun/2026:05:52:19 +0000] "GET / HTTP/1.1" 444 0 "-" "ELB-HealthChecker/2.0"
+<ip> - - [15/Jun/2026:05:52:19 +0000] "GET / HTTP/1.1" 444 0 "-" "ELB-HealthChecker/2.0"
