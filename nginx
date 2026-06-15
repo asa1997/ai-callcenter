@@ -46,7 +46,7 @@ grep -r "default_server" /etc/nginx ->
 /etc/nginx/sites-available/default:     listen [::]:80 default_server;
 /etc/nginx/sites-available/default:     # listen 443 ssl default_server;
 /etc/nginx/sites-available/default:     # listen [::]:443 ssl default_server;
-/etc/nginx/sites-available/demoagent.o31e.com:    listen 443 ssl default_server;
+/etc/nginx/sites-available/<application ur>:    listen 443 ssl default_server;
 
 tail -f /var/log/nginx/access.log
 <ip> - - [15/Jun/2026:03:36:48 +0000] "GET / HTTP/1.1" 444 0 "-" "ELB-HealthChecker/2.0"
