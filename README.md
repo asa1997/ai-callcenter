@@ -35,6 +35,10 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 
+# Configure environment variables
+cp .env.example .env
+# Edit .env and add your AIRS API token
+
 # Download and ingest policies into Chroma
 python mcp_services/policy_rag/ingest.py
 

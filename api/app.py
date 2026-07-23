@@ -8,6 +8,11 @@ import uvicorn
 
 from agent.agent import handle_message
 from agent.mcp_client import extract_document_info_async
+from airs.api_intercept import scan_content
+
+# ── In-memory document context store (keyed by customer_id) ──────────────────
+# /upload saves here; /chat reads from here automatically
+document_store: dict[str, str] = {}
 
 app = FastAPI(
     title="AI Call Center Agent",
@@ -84,11 +89,26 @@ def chat(request: ChatRequest):
     if not request.message:
         raise HTTPException(status_code=400, detail="message is required")
 
+    # Auto-attach stored document context from /upload if not provided
+    doc_ctx = request.document_context or document_store.get(request.customer_id, "")
+
+    # AIRS safety check on user input
+    try:
+        scan_content(prompt=request.message)
+    except RuntimeError as e:
+        raise HTTPException(status_code=403, detail=str(e))
+
     result = handle_message(
         request.customer_id,
         request.message,
-        request.document_context
+        doc_ctx
     )
+
+    # AIRS safety check on agent response
+    try:
+        scan_content(prompt=request.message, response=result["response"])
+    except RuntimeError as e:
+        raise HTTPException(status_code=403, detail=str(e))
 
     return ChatResponse(
         customer_id=  request.customer_id,
@@ -183,6 +203,9 @@ async def upload(
         "full_text":        result.get("full_text", ""),
     })
 
+    # Store document context server-side for this customer
+    document_store[customer_id] = document_context
+
     return UploadResponse(
         customer_id=     customer_id,
         document_type=   result.get("document_type", "unknown"),
@@ -191,7 +214,7 @@ async def upload(
         income_formatted=result.get("income_formatted", "Not found"),
         document_context=document_context,
         filename=        file.filename,
-        message=         "Document processed. Pass document_context to /chat."
+        message=         "Document processed. You can now call /chat — document context will be included automatically."
     )
 
 # Add at bottom:
