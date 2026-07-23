@@ -6,13 +6,24 @@ import chromadb
 from sentence_transformers import SentenceTransformer
 
 # ── Configuration ─────────────────────────────────────────────────────────────
-from mcp_services.policy_rag.rag_config import (
-    CHROMA_DIR,
-    COLLECTION_NAME,
-    EMBEDDING_MODEL,
-    N_RESULTS,
-    POLICIES_DIR,
-)
+try:
+    # Works when the package root is importable (e.g., python -m ...).
+    from mcp_services.policy_rag.rag_config import (
+        CHROMA_DIR,
+        COLLECTION_NAME,
+        EMBEDDING_MODEL,
+        N_RESULTS,
+        POLICIES_DIR,
+    )
+except ModuleNotFoundError:
+    # Works when this file is executed directly (python mcp_services/.../ingest.py).
+    from rag_config import (
+        CHROMA_DIR,
+        COLLECTION_NAME,
+        EMBEDDING_MODEL,
+        N_RESULTS,
+        POLICIES_DIR,
+    )
 
 
 def chunk_policy_file(filepath: str) -> list[dict]:
