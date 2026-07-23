@@ -5,9 +5,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-API_URL = os.getenv("AIRS_API_URL", "")
-SECURITY_PROFILE = os.getenv("AIRS_SECURITY_PROFILE", "")
-API_TOKEN = os.getenv("AIRS_API_TOKEN", "")
+AIRS_API_URL = os.getenv("AIRS_API_URL", "")
+AIRS_SECURITY_PROFILE = os.getenv("AIRS_SECURITY_PROFILE", "")
+AIRS_API_TOKEN = os.getenv("AIRS_API_TOKEN", "")
 
 
 def scan_content(prompt: str, response: str = "") -> dict:
@@ -26,7 +26,7 @@ def scan_content(prompt: str, response: str = "") -> dict:
         "tr_id": "string",
         "session_id": "string",
         "ai_profile": {
-            "profile_name": SECURITY_PROFILE
+            "profile_name": AIRS_SECURITY_PROFILE
         },
         "metadata": {
             "app_name": "ai-callcenter",
@@ -44,10 +44,10 @@ def scan_content(prompt: str, response: str = "") -> dict:
     headers = {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'x-pan-token': API_TOKEN
+        'x-pan-token': AIRS_API_TOKEN
     }
 
-    conn = http.client.HTTPSConnection(API_URL)
+    conn = http.client.HTTPSConnection(AIRS_API_URL)
     conn.request("POST", "/v1/scan/sync/request", payload, headers)
     res = conn.getresponse()
     data = res.read()
