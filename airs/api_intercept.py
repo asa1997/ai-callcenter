@@ -1,5 +1,4 @@
 import os
-import json
 import requests
 from dotenv import load_dotenv
 
@@ -10,6 +9,15 @@ AIRS_SECURITY_PROFILE = os.getenv("AIRS_SECURITY_PROFILE", "")
 AIRS_API_TOKEN = os.getenv("AIRS_API_TOKEN", "")
 AIRS_TIMEOUT = int(os.getenv("AIRS_TIMEOUT", "60"))
 AIRS_USAGE = os.getenv("AIRS_USAGE", "").strip().lower()
+
+
+def _get_scan_url() -> str:
+    url = AIRS_API_URL.strip()
+    if not url.startswith(("http://", "https://")):
+        url = f"https://{url}"
+    if url.rstrip("/").endswith("/v1/scan/sync/request"):
+        return url
+    return f"{url.rstrip('/')}/v1/scan/sync/request"
 
 
 def scan_content(prompt: str, response: str = "") -> dict:
@@ -34,7 +42,7 @@ def scan_content(prompt: str, response: str = "") -> dict:
         "x-pan-token": AIRS_API_TOKEN
     }
 
-    api_response = requests.post(AIRS_API_URL, json=payload, headers=headers, timeout=AIRS_TIMEOUT)
+    api_response = requests.post(_get_scan_url(), json=payload, headers=headers, timeout=AIRS_TIMEOUT)
     api_response.raise_for_status()
     result = api_response.json()
 
